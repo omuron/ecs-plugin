@@ -2,8 +2,8 @@ version: "3.8"
 services:
   frontend:
     build: app
-    x-aws-pull_credentials: <<<your arn for your secret you can get with docker ecs secret list>>>
-    image: <<<your docker hub user name>>>/timestamper
+    x-aws-pull_credentials: arn:aws:secretsmanager:ap-northeast-1:123456789012:secret:dockerhubAccessToken-45Y3pu
+    image: omuron/timestamper
     ports:
       - "5000:5000"
     depends_on:
